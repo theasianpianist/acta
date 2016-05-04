@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" minimum-scale = 1, maximum-scale = 1, user-scalable = no>
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="acta" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+
+<link rel="apple-touch-startup-image" href="iphone-startup.png">
+<link rel="apple-touch-startup-image" href="ipad-landscape-startup.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+<link rel="apple-touch-startup-image" href="ipad-portrait-startup.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+        // iOS web app full screen hacks.
+        if(window.navigator.standalone == true) {
+                // make all link remain in web app mode.
+                $('a').click(function() {
+                        window.location = $(this).attr('href');
+            return false;
+                });
+        }
+});
+</script>
+
+ <title>acta</title>
+ <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+ <style>
+ 
+ body {
+ margin:0 ;
+ padding: 0;
+ background: black;
+ } 
+ 
+ a {
+ text-decoration:none;
+ }
+ 
+ #header > a {
+
+ }
+ 
+ #header > .logo {
+ font-size:2em;
+ -webkit-text-fill-color: black;
+ font-family:'Montserrat', sans-serif;
+ justify-content: center;
+
+  }
+ 
+ .navItem {
+ -webkit-text-fill-color:black;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1em; 
+ }
+ 
+ ul {
+ list-style: none;
+ margin:0;
+ padding:0;
+ }
+ 
+#page {
+display:flex;
+flex-flow:column;
+margin:0;
+padding: 0; 
+}
+
+#header {
+order:1;
+display: flex;
+justify-content:space-around;
+align-items:center;
+background-color: White;
+position: fixed;
+top:0;
+left:0;
+    height: auto;
+    width: 100%;
+   
+    }
+    
+     
+#news {
+order:2;
+font-size: 1.9em;
+display:flex;
+flex-flow:row-reverse wrap-reverse;
+padding-top: 1em;
+}
+
+.newsItem {
+
+min-width:300px;
+min-height: 250px;
+background: lightgrey;
+border:1px solid #706667;
+flex: auto;
+text-indent: 10px;
+}
+
+.newsItem span{
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 1px;
+-webkit-text-fill-color: white; 	
+
+background-color: #79797B;
+position:relative;
+top:12px;
+}
+
+.newsItem:nth-of-type(9) {
+order:1;
+}
+.newsItem:nth-of-type(8) {
+order:2;
+}
+.newsItem:nth-of-type(7) {
+order:3;
+}
+.newsItem:nth-of-type(6) {
+order:4;
+}
+.newsItem:nth-of-type(5) {
+order:5;
+}
+.newsItem:nth-of-type(4) {
+order:6;
+}
+.newsItem:nth-of-type(3) {
+order:7;
+}
+.newsItem:nth-of-type(2) {
+order:8;
+}
+.newsItem:nth-of-type(1) {
+order:9;
+}
+ 
+#footer {
+order:3;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+ 
+</style>
+</head>
+ <body>
+ 
+ <div id="page">
+ 
+ <ul id="news">
+ <li class="newsItem"> <span> <a href="sms:5709098631">New SMS Message</a> <span> </li> 
+ <li class="newsItem"> <span> news item one <span>  </li>
+ <li class="newsItem"> <span> news item two <span> </li>
+ <li class="newsItem"> <span> H <span> </li>
+ <li class="newsItem"> <span> I <span> </li>
+ </ul>
+
+	 
+ <nav id="header" class="header">
+ 	
+  <a class="logo" href="index.html">acta</a> 
+  <a class="navItem" href="#">stories</a>
+  <a class="navItem" href="#">submit</a>
+  <a class="navItem" href="#">contact</a>
+
+ </nav>
+
+ <nav id="footer">
+ 
+ </nav>
+ </div>
+ </body>
+ </html>
